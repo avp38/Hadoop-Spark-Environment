@@ -28,22 +28,21 @@ Ideal for development cluster on a laptop with at least 4GB of memory.
 8. Run ```vagrant destroy``` when you want to destroy and get rid of the VM.
 
 # 4. Post Provisioning
-After you have provisioned the cluster, you need to run some commands to initialize your Hadoop cluster. SSH into head using  
-```vagrant ssh head```
-Commands below require root permissions. Change to root access using ```sudo su``` or create a new user and grant permissions if you want to use a non-root access. In such a case, you'll need to do this on VMs.
+After you have provisioned the cluster, you need to run some commands to initialize your Hadoop cluster. 
+SSH into head using ```vagrant ssh head``` Commands below require root permissions. Change to root access using ```sudo su``` or create a new user and grant permissions if you want to use a non-root access. In such a case, you'll need to do this on VMs.
 
 Issue the following command. 
 
 1. $HADOOP_PREFIX/bin/hdfs namenode -format myhadoop
 
 ## Start Hadoop Daemons (HDFS + YARN)
-SSH into head and issue the following commands to start HDFS.
-```vagrant ssh head```
+SSH into head and issue the following commands to start HDFS.```vagrant ssh head```
+
 1. $HADOOP_PREFIX/sbin/hadoop-daemon.sh --config $HADOOP_CONF_DIR --script hdfs start namenode
 2. $HADOOP_PREFIX/sbin/hadoop-daemons.sh --config $HADOOP_CONF_DIR --script hdfs start datanode
 
-SSH into body and issue the following commands to start YARN.
-```vagrant ssh body```
+SSH into body and issue the following commands to start YARN.```vagrant ssh body```
+
 1. $HADOOP_YARN_HOME/sbin/yarn-daemon.sh --config $HADOOP_CONF_DIR start resourcemanager
 2. $HADOOP_YARN_HOME/sbin/yarn-daemons.sh --config $HADOOP_CONF_DIR start nodemanager
 3. $HADOOP_YARN_HOME/sbin/yarn-daemon.sh start proxyserver --config $HADOOP_CONF_DIR
@@ -58,14 +57,12 @@ yarn jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.ja
 ```
 
 ## Start Spark in Standalone Mode
-SSH into head and issue the following command.
-```vagrant ssh head```
+SSH into head and issue the following command.```vagrant ssh head```
 
 1. $SPARK_HOME/sbin/start-all.sh
 
 ### Test Spark on YARN
-You can test if Spark can run on YARN by issuing the following command. Try NOT to run this command on the slave nodes.
-```vagrant ssh head```
+You can test if Spark can run on YARN by issuing the following command. Try NOT to run this command on the slave nodes.```vagrant ssh head```
 ```
 $SPARK_HOME/bin/spark-submit --class org.apache.spark.examples.SparkPi \
     --master yarn-cluster \
@@ -76,11 +73,12 @@ $SPARK_HOME/bin/spark-submit --class org.apache.spark.examples.SparkPi \
 ```
 	
 ### Test Spark using Shell
-Start the Spark shell using the following command. Try NOT to run this command on the slave nodes.
-```vagrant ssh head```
+Start the Spark shell using the following command. Try NOT to run this command on the slave nodes.```vagrant ssh head```
+
 ```
 $SPARK_HOME/bin/spark-shell --master spark://head:7077
 ```
+
 Then go here https://spark.apache.org/docs/latest/quick-start.html to start the tutorial. Most likely, you will have to load data into HDFS to make the tutorial work (Spark cannot read data on the local file system).
 
 # 6. Web UI
