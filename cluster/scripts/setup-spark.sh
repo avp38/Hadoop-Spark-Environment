@@ -1,7 +1,7 @@
 #!/bin/bash
 SPARK_VERSION=spark-2.1.0
 SPARK_ARCHIVE=${SPARK_VERSION}-bin-hadoop2.7.tar.gz
-SPARK_MIRROR_DOWNLOAD=../resources/spark-2.1.0-bin-hadoop2.7.tar.gz
+SPARK_MIRROR_DOWNLOAD=../resources/spark-2.1.0-bin-hadoop2.7.tgz
 SPARK_RES_DIR=/vagrant/resources/spark
 SPARK_CONF_DIR=/usr/local/spark/conf
 
