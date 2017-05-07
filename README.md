@@ -12,7 +12,7 @@ Ideal for development cluster on a laptop with at least 4GB of memory.
 
 # 2. Prerequisites and Gotchas to be aware of
 1. At least 1GB memory for each VM node. Default script is for 4 nodes, so you need 4GB for the nodes, in addition to the memory for your host machine.
-2. Vagrant 1.9.2 or higher, Virtualbox 5.1.14 or higher
+2. Vagrant 1.9.2, Virtualbox 5.1.14 (Use the exact version specified to avoid compatibility issues)
 3. Preserve the Unix/OSX end-of-line (EOL) characters while cloning this project; scripts will fail with Windows EOL characters.
 4. Project is tested on Centos 7.2 host OS; not tested with VMware provider for Vagrant.
 5. The Vagrant box is downloaded to the ~/.vagrant.d/boxes directory. On Windows, this is C:/Users/{your-username}/.vagrant.d/boxes.
