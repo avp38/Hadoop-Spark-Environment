@@ -10,7 +10,7 @@ Ideal for development cluster on a laptop with at least 4GB of memory.
 3. slave1 : HDFS DataNode + YARN NodeManager + Spark Slave
 4. slave2 : HDFS DataNode + YARN NodeManager + Spark Slave
 
-# 2. Prerequisites and Gotchas to be aware of
+# 2. Prerequisites
 1. At least 1GB memory for each VM node. Default script is for 4 nodes, so you need 4GB for the nodes, in addition to the memory for your host machine.
 2. Vagrant 1.9.2, Virtualbox 5.1.14 (Use the exact version specified to avoid compatibility issues)
 3. Preserve the Unix/OSX end-of-line (EOL) characters while cloning this project; scripts will fail with Windows EOL characters.
@@ -81,7 +81,7 @@ $SPARK_HOME/bin/spark-shell --master spark://head:7077
 
 Then go here https://spark.apache.org/docs/latest/quick-start.html to start the tutorial. Most likely, you will have to load data into HDFS to make the tutorial work (Spark cannot read data on the local file system).
 
-# 6. Web UI
+# 5. Web UI
 You can check the following URLs to monitor the Hadoop daemons.
 
 1. [NameNode] (http://localhost:50070/dfshealth.html)
