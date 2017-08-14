@@ -1,4 +1,4 @@
-Setting Up Hadoop 2.7.3 + Spark 2.1 on 64-bit Centos 7.1
+Setting Up Hadoop 2.7.3 + Spark 2.1
 ============================
 
 # 1. Introduction
