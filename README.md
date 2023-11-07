@@ -22,7 +22,7 @@ Ideal for development cluster on a laptop with at least 4GB of memory.
 2. [Download and install Vagrant](http://www.vagrantup.com/downloads.html).
 3. Git clone this project, and change directory (cd) into *cluster* (directory).
 4. [Download Hadoop 2.7.3 into the /resources directory](http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz)
-5. [Download Spark 2.1 into the /resources directory](http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz)
+5. [Download Spark 2.1 into the /resources directory](https://archive.apache.org/dist/spark/spark-2.1.0/spark-2.1.0-bin-hadoop2.7.tgz)
 6. Run ```vagrant up``` to create the VM.
 7. Run ```vagrant ssh head``` to get into your VM.
 8. Run ```vagrant destroy``` when you want to destroy and get rid of the VM.
